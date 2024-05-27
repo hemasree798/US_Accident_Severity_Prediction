@@ -16,6 +16,7 @@ def load_predict_model(input_data):
     # Predict the severity
     data.columns = data.columns.astype(str)
     prediction = model.predict(data)
+    st.write(prediction)
     severity = prediction[0]
     st.success(f'The predicted severity of the accident is: Severity {severity}')
 
